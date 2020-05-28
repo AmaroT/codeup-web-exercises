@@ -1,0 +1,32 @@
+
+#navbar {
+    background-color:black;
+    list-style-type:none;
+    text-align: center;
+    margin:0:
+    padding:0;
+
+}
+#navbar li, a {
+    display:inline-block;
+    font-size: 14px;
+    padding:10px;
+    color: gray;
+    text-align: left;
+    text-decoration: none;
+}
+#github-logo {
+    background-color:black;
+    position:relative;
+    float: left;
+
+
+
+}
+#codeup-logo {
+    position:relative;
+    float:left;
+    margin-top:50px;
+
+
+}
