@@ -2,48 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>HTML Forms</title>
+    <title>Register With Us</title>
 </head>
 <body>
-    <form method="post" action="https://request-inspector.glitch.me/">
-        <label for="name">Input your name:</label>
-        <input type="text" name="user" id="name" placeholder="Name goes here"/>
-        <label for="password">Input your Password: </label>
-        <input type="password" name="pw" id="password" />
-        <textarea name="bodyText" id="bodyText" cols="30" rows="10" value="How was your day?"></textarea>
-        <br />
+<form method="POST" action="https://www.elformo.com/forms/c809e762-cfa7-4b91-a04a-4c83c4047474">
+    <label for="email">Email: </label>
+    <input type="text" name="user" id="email" placeholder="Enter your email address" />
+    <label for="password">Password: </label>
+    <input type="password" name="pw" id="password" placeholder="Enter your password"/>
+    <br />
 
-        <input type="checkbox" name="addToEmailList" id="id=addToEmailList" value="true">
-        <label for="id=addToEmailList">I would like to receive emails about updates to this product in the future!</label>
-        <label for="bodyText">Input text: </label>
+    <label for="bodyText">Bio:</label>
+    <br />
+    <textarea name="bodyText" id="bodyText" cols="30" rows="10">Please type here to tell us a little bit about yourself.</textarea>
+    <br />
 
-        <h2>How did you hear about us?</h2>
-        <input type="checkbox" value="learnToCode" name="capture" id="ltc">
-        <label for="ltc">Learn to Code Workshop</label>
-        <input type="checkbox" value="billboard" name="capture" id="ltc">
-        <label for="billboard">Billboard</label>
-        <br />
-        <h4>Which of these is the most correct (in JavaScript): 4 + "4"</h4>
-        <input type="radio" name="multipleChoice" value="A" id="A" >
-        <label for="A">8</label>
-        <input type="radio" name="multipleChoice" value="B" id="B" >
-        <label for="B">44</label>
-        <input type="radio" name="multipleChoice" value="C" id="C" >
-        <label for="C">"44"</label>
-        <input type="radio" name="multipleChoice" value="D" id="D" >
-        <label for="D">"8"</label>
-        <br />
-        <label for="dropdown">Select your browser:</label>
-        <select name="dropdown" id="dropdown"></select>
+
+    <h2>How did you hear about us?</h2>
+
+    <input type="radio" name="multipleChoice" value="A" id="A"> <label for="A">Billboard</label><br>
+    <input type="radio" name="multipleChoice" value="B" id="B"> <label for="B">Radio Advertisement</label><br>
+    <input type="radio" name="multipleChoice" value="C" id="C"> <label for="C">Internet Advertisement</label><br>
+    <input type="radio" name="multipleChoice" value="D" id="D"> <label for="D">Other</label><br>
+
+    <label for="dropdown">Select your browser:</label>
+    <br />
+    <select name="dropdown" id="dropdown">
         <option value="opera">Opera</option>
         <option value="netscape">Netscape Navigator</option>
-        <option value="aol">America Online Browser</option>
+        <option value="aol" >America Online Browser</option>
         <option value="safari">Safari</option>
-        <br />
-        <input type="hidden" name="user-id" value="432">
+        <option value="google" selected>Google Chrome</option>
+    </select>
+    <br />
 
-        <input type="submit" />
-        <button type="submit">Submit your form</button>
 
+
+    <button type="submit">Submit your form</button>
+</form>
 </body>
 </html>
+
+<!--What do you notice when changing the form's request method from GET or POST? "The URL address changed with the ?="-->
+<!--What happens if you leave off the "name" attribute on an input? "nothing"-->
+<!--What happens if you leave off the "id" attribute on a form input? "nothing"-->
