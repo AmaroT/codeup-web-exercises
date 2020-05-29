@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>House Hunter</title>
+</head>
+<body>
+    <h1>Lets Hunt for a House!</h1>
+    <form method="POST" action="https://request-inspector.glitch.me/">
+        <label for="property">Property Type:</label>
+        <input type="text" name="property" id="property">
+        <br>
+        <label for="sq ft">Square Footage:</label>
+        <input type="text" name="sq ft" id="sq ft">
+        <br>
+        <label for="min_price">Minimum Price:</label>
+        <input type="text" name="min_price" id="min_price">
+        <br>
+        <label for="max_price">Maximum Price:</label>
+        <input type="text" name="max_price" id="max_price">
+        <br>
+        <label for="zip">Zipcode:</label>
+        <input type="text" name="zip" id="zip">
+        <br>
+        <label for="rooms">Number of Rooms:</label>
+        <input type="text" name="rooms" id="rooms">
+        <br>
+        <label for="baths">Number of Bathrooms</label>
+        <input type="text" name="baths" id="baths">
+        <br>
+        <h4>With a Garage?</h4>
+        <input type="radio" name="garage" value="yes" id="yes"> <label for="yes">Yes</label>
+        <input type="radio" name="garage" value="no" id="no"> <label for="no">No</label>
+        <br>
+        <button type="submit">Search Now</button>
+    </form>
+</body>
+</html>
