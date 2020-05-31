@@ -1,0 +1,22 @@
+#container {
+    margin: 50px auto;
+    width: 500px;
+    padding: 10px;
+}
+
+#container h1.fancy-header {
+    color: blue;
+    text-decoration: underline;
+}
+
+em {
+    font-weight: bold;
+}
+
+.article {
+    clear:both;
+}
+
+.article a{
+    float:right;
+}

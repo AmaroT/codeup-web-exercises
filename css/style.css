@@ -1,4 +1,62 @@
+/*These are the settings for the header*/
+header {
+    text-align: center;
+
+
+}
 .fancy-header {
-    color: purple;
+    color: lightgrey;
+    text-decoration: underline;
+    font-family: 'Open Sans', sans-serif;
 }
 
+/*This is for the body settings*/
+body {
+    background-image: url("/img/vd_bg.jpg");
+
+}
+h2 {
+    font-style: italic;
+    text-align: center;
+    text-decoration: underline;
+    font-family: 'Caladea', serif;
+
+}
+/*List-style settings*/
+li {
+    list-style-type: lower-alpha;
+    font-family: 'Caladea', serif;
+    position: relative;
+}
+
+/*font settings*/
+/*table settings*/
+table{
+    color:orange;
+    border: 2px solid red;
+    margin:10px;
+    float:center;
+}
+td {
+    border: 1px solid black;
+    padding:7px;
+
+}
+th {
+    border: 1px solid green;
+    padding: 7px;
+
+}
+/*anchor link settings*/
+a:visited {
+    color: purple;
+}
+a:hover {
+    color:red;
+}
+a:hover {
+    color: black;
+}
+a:active {
+    color: green;
+}
