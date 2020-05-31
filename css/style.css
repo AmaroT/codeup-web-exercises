@@ -1,3 +1,11 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
 /*These are the settings for the header*/
 header {
     text-align: center;
@@ -5,16 +13,25 @@ header {
 
 }
 .fancy-header {
-    color: lightgrey;
+    color: #fffefa;
     text-decoration: underline;
     font-family: 'Open Sans', sans-serif;
+}
+header p {
+    color: #ffffff;
+    font-size: 16px;
 }
 
 /*This is for the body settings*/
 body {
-    background-image: url("/img/vd_bg.jpg");
-
+    background: url("../img/vd_bg.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
+
+
 h2 {
     font-style: italic;
     text-align: center;
@@ -35,7 +52,7 @@ table{
     color:orange;
     border: 2px solid red;
     margin:10px;
-    float:center;
+
 }
 td {
     border: 1px solid black;
