@@ -43,34 +43,7 @@
             top:10px;
             color:white;
 }
-/*.top-box{*/
-/*    grid-template-columns: 1fr;*/
-/*    grid-template-areas:*/
-/*    ".box1"*/
-/*    ".box2";*/
 
-/*}*/
-/*.box1 {*/
-/*    grid-column:1/2;*/
-/*    grid-row: 1;*/
-/*}*/
-/*.box2 {*/
-/*    grid-column: 2/3;*/
-/*    grid-row: 1;*/
-/*}*/
-/*.mid-box {*/
-/*    display: grid;*/
-/*    grid-template-areas:*/
-/*    ".box4" ".box5"*/
-/*    ".box6" ".box7";*/
-/*}*/
-/*.bot-box {*/
-/*    display: grid;*/
-/*    grid-template-areas:*/
-/*    ".box8";*/
-/*}*/
-/*.box1 {}*/
-/*These are the settings for the header*/
 header {
         text-align: center;
         position: relative;
@@ -108,13 +81,54 @@ li {
     position: relative;
     text-align: center;
     color: whitesmoke;
-
 }
 /*Image area, code for CSS grid is commented out for this area.*/
 .mid-box {
     margin-left: 50px;
 
 }
+/*table settings*/
+table{
+    color:whitesmoke;
+    border: 5px double white;
+    margin:10px;
+    position: relative;
+    height: auto;
+    width: auto;
+}
+td {
+    border-bottom: 1px solid darkred;
+    margin:15px;
+    padding: 7px;
+}
+th {
+    border-bottom: 3px groove green;
+}
+.disclaimer {
+    font-size: 30px;
+    font-style: italic;
+}
+/*anchor link settings*/
+footer p{
+    font-size: 35px;
+}
+a:visited {
+    color: purple;
+}
+a:hover {
+    transition: all 1s ease-in-out;
+    transform: scale(1.5);
+    font-color: white;
+    -webkit-transition: color 1s;
+    transition: color 1s;
+}
+a:hover {
+    color: white;
+}
+a:active {
+    color: green;
+}
+
 /*.box4 {*/
 /*    border-bottom:5px;*/
 /*    position: relative;*/
@@ -142,49 +156,31 @@ li {
 /*    width: 300px;*/
 
 /*}*/
-/*table settings*/
-table{
-    color:whitesmoke;
-    border: 5px double white;
-    margin:10px;
-    position: relative;
-    height: auto;
-    width: auto;
+/*.top-box{*/
+/*    grid-template-columns: 1fr;*/
+/*    grid-template-areas:*/
+/*    ".box1"*/
+/*    ".box2";*/
 
-}
-td {
-    border-bottom: 1px solid darkred;
-    margin:15px;
-    padding: 7px;
-
-
-}
-th {
-    border-bottom: 3px groove green;
-
-}
-.disclaimer {
-    font-size: 30px;
-    font-style: italic;
-}
-/*anchor link settings*/
-footer p{
-    font-size: 35px;
-}
-a:visited {
-    color: purple;
-}
-a:hover {
-    transition: all 1s ease-in-out;
-    transform: scale(1.5);
-    font-color: white;
-    -webkit-transition: color 1s;
-    transition: color 1s;
-
-}
-a:hover {
-    color: white;
-}
-a:active {
-    color: green;
-}
+/*}*/
+/*.box1 {*/
+/*    grid-column:1/2;*/
+/*    grid-row: 1;*/
+/*}*/
+/*.box2 {*/
+/*    grid-column: 2/3;*/
+/*    grid-row: 1;*/
+/*}*/
+/*.mid-box {*/
+/*    display: grid;*/
+/*    grid-template-areas:*/
+/*    ".box4" ".box5"*/
+/*    ".box6" ".box7";*/
+/*}*/
+/*.bot-box {*/
+/*    display: grid;*/
+/*    grid-template-areas:*/
+/*    ".box8";*/
+/*}*/
+/*.box1 {}*/
+/*These are the settings for the header*/
