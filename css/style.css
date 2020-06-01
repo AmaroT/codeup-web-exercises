@@ -1,78 +1,189 @@
-.container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(9, 1fr);
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
+
+/*Media Queries */
+/*--------------------------------Mobile View--------------*/
+@media (max-width:768px) {
+    body {
+        background: url("../img/vd_bg.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height: auto;
+        margin: 0 auto;
+    }
 }
 
+/*!* ---------------------------------Tablet View----------------------*!*/
+@media (min-width:768px) and (max-width: 1200px) {
+    body {
+        background: url("../img/vd_bg.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height: auto;
+        margin: 0 auto;
+    }
+}
+/*!*----------------------------------Desktop view----------------------*!*/
+@media (min-width:1200px) {
+    body{
+        background: url("../img/vd_bg.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height: auto;
+        margin: 0 auto;
+    }
+}
+.container {
+    grid-area: auto;
+    position: relative;
+            top:10px;
+            color:white;
+}
+/*.top-box{*/
+/*    grid-template-columns: 1fr;*/
+/*    grid-template-areas:*/
+/*    ".box1"*/
+/*    ".box2";*/
+
+/*}*/
+/*.box1 {*/
+/*    grid-column:1/2;*/
+/*    grid-row: 1;*/
+/*}*/
+/*.box2 {*/
+/*    grid-column: 2/3;*/
+/*    grid-row: 1;*/
+/*}*/
+/*.mid-box {*/
+/*    display: grid;*/
+/*    grid-template-areas:*/
+/*    ".box4" ".box5"*/
+/*    ".box6" ".box7";*/
+/*}*/
+/*.bot-box {*/
+/*    display: grid;*/
+/*    grid-template-areas:*/
+/*    ".box8";*/
+/*}*/
+/*.box1 {}*/
 /*These are the settings for the header*/
 header {
-    text-align: center;
-
-
+        text-align: center;
+        position: relative;
+        color: whitesmoke;
 }
-.fancy-header {
-    color: #fffefa;
-    text-decoration: underline;
-    font-family: 'Open Sans', sans-serif;
-}
-header p {
-    color: #ffffff;
-    font-size: 16px;
-}
-
 /*This is for the body settings*/
-body {
-    background: url("../img/vd_bg.jpg") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
 
 h2 {
+    font-size: 36px;
     font-style: italic;
     text-align: center;
     text-decoration: underline;
     font-family: 'Caladea', serif;
-
+    color: #78C5EF;
+}
+h2.box-header {
+    color:ghostwhite;
+    position:relative;
+    text-align: left;
 }
 /*List-style settings*/
+ul {
+    list-style-type: upper-alpha;
+    position: center;
+    text-align: center;
+    list-style-position: inside;
+}
+ol {
+    list-style-type: upper-roman;
+    list-style-position: inside;
+    text-align: center;
+}
 li {
-    list-style-type: lower-alpha;
     font-family: 'Caladea', serif;
     position: relative;
-}
+    text-align: center;
+    color: whitesmoke;
 
-/*font settings*/
+}
+/*Image area, code for CSS grid is commented out for this area.*/
+.mid-box {
+    margin-left: 50px;
+
+}
+/*.box4 {*/
+/*    border-bottom:5px;*/
+/*    position: relative;*/
+/*    margin-left: 800px;*/
+/*    width: 300px;*/
+
+/*}*/
+/*.box5{*/
+/*    border-bottom:5px;*/
+/*    position: relative;*/
+/*    margin-left: 800px;*/
+/*    width: 300px;*/
+/*}*/
+/*.box6 {*/
+/*    border-bottom:5px;*/
+/*    position: relative;*/
+/*    margin-left: 800px;*/
+/*    width: 300px;*/
+/*}*/
+
+/*.box7 {*/
+/*    border-bottom:5px;*/
+/*    position: fixed;*/
+/*    margin-left: 800px;*/
+/*    width: 300px;*/
+
+/*}*/
 /*table settings*/
 table{
-    color:orange;
-    border: 2px solid red;
+    color:whitesmoke;
+    border: 5px double white;
     margin:10px;
+    position: relative;
+    height: auto;
+    width: auto;
 
 }
 td {
-    border: 1px solid black;
-    padding:7px;
+    border-bottom: 1px solid darkred;
+    margin:15px;
+    padding: 7px;
+
 
 }
 th {
-    border: 1px solid green;
-    padding: 7px;
+    border-bottom: 3px groove green;
 
 }
+.disclaimer {
+    font-size: 30px;
+    font-style: italic;
+}
 /*anchor link settings*/
+footer p{
+    font-size: 35px;
+}
 a:visited {
     color: purple;
 }
 a:hover {
-    color:red;
+    transition: all 1s ease-in-out;
+    transform: scale(1.5);
+    font-color: white;
+    -webkit-transition: color 1s;
+    transition: color 1s;
+
 }
 a:hover {
-    color: black;
+    color: white;
 }
 a:active {
     color: green;
