@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="custom.css">
+
+    <title>Order Pizza</title>
+</head>
+<body>
+    <main>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Pizza World</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mr-0 mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Order Online <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Menu</a>
+                    </li>
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>-->
+<!--                    </li>-->
+                </ul>
+                <form class="form-inline mr-auto my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Zip Code">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search stores near you</button>
+                </form>
+                <div class mr-0 ="login">
+                    <a href="#"><i class="fas fa-user"></i>Sign Up</a>
+                </div>
+            </div>
+        </nav>
+        <div class="d-sm-none d-md-block">
+            <div class="container .d-flex p-2">
+
+                <div class="jumbotron jumbotron-fluid">
+                    <img src="img/pizza.png" class="img-fluid" alt="Responsive image">
+                    <h1 class="display-4">Welcome to Pizza World!!</h1>
+                </div>
+            </div>
+        </div>
+        <h2>Build Your Own Pizza!
+        </h2>
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="crust" role="tabpanel" aria-labelledby="crust-tab">hello</div>
+            <div class="tab-pane fade" id="cheese" role="tabpanel" aria-labelledby="cheese-tab">are</div>
+            <div class="tab-pane fade" id="toppings" role="tabpanel" aria-labelledby="toppings-tab">you</div>
+        </div>
+<!--        size and crust tab/ cheese and sauce and toppings, first page-->
+<!--        <ul class="nav nav-tabs" id="myTab" role="tablist">-->
+<!--            <li class="nav-item d-flex justify-content-between align-items-center mx-2">-->
+<!--                <a class="nav-link active" id="size-and-crust-tab" data-toggle="tab" href="#size-and-crust-tab" role="tab"><span class="badge badge-secondary badge-pill">1</span>Size and Crust</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item d-flex justify-content-between align-items-center mx-2">-->
+<!--                <a class="nav-link" id="cheese-and-sauce tab" data-toggle="tab" href="#cheese-and-sauce tab" role="tab"><span class="badge badge-secondary badge-pill">2</span>Cheese and Sauce</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item d-flex justify-content-between align-items-center mx-2">-->
+<!--                <a class="nav-link" id="toppings" data-toggle="tab" href="#toppings" role="tab"><span class="badge badge-secondary badge-pill">3</span>Toppings</a>-->
+<!--            </li>-->
+<!--        </ul>-->
+<!--        <div class="tab-content" id="myTabContent">-->
+<!--            <div class="tab-pane fade show active" id="size_and_crust" role="tabpanel" aria-labelledby="size-and-crust-tab">-->
+<!--            <div class="card">-->
+<!--                <div class="card-title">-->
+<!--                    <h3>Chose size and Crust</h3>-->
+<!--                </div>-->
+<!--&lt;!&ndash;                hand tossed option&ndash;&gt;-->
+<!--                <div class="card-body">-->
+<!--                    <h4>Hand Tossed</h4>-->
+<!--                    <input class="form-control" type="text" placeholder="Garlic seasoned crust with a rich, buttery taste." readonly>-->
+<!--                <div class="form-check">-->
+<!--                    <input class="form-check-input" type="radio" name="size_option" id="small_option" value="small_option">-->
+<!--                    <label class="form-check-label" for="small_option">-->
+<!--                        Small(10")-->
+<!--                    </label>-->
+<!--                </div>-->
+<!--                <div class="form-check">-->
+<!--                    <input class="form-check-input" type="radio" name="size_option" id="medium_option" value="medium_option">-->
+<!--                    <label class="form-check-label" for="medium_option">-->
+<!--                        Medium(12")-->
+<!--                    </label>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--&lt;!&ndash;                Crispy options&ndash;&gt;-->
+<!--            <div class="card-body">-->
+<!--                <h4>Crispy Thin</h4>-->
+<!--                <input class="form-control" type="text" placeholder="Thin enough for optimum crispy to crunchy ratio" readonly>-->
+<!--                <div class="form-check">-->
+<!--                    <input class="form-check-input" type="radio" name="size_option" id="crispy_medium" value="crispy_option">-->
+<!--                    <label class="form-check-label" for="crispy_medium">-->
+<!--                        Medium(12")-->
+<!--                    </label>-->
+<!--                </div>-->
+<!--                <div class="form-check">-->
+<!--                    <input class="form-check-input" type="radio" name="size_option" id="large_option" value="large_option">-->
+<!--                    <label class="form-check-label" for="large_option">-->
+<!--                        Large(14")-->
+<!--                    </label>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="input-group mb-3">-->
+<!--                <div class="input-group-append ml-auto px-md-5">-->
+<!--                    <a href="#cheese-and-sauce tab" class="badge badge-primary p-3">Next Step ></a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--&lt;!&ndash;        cheese and sauce tab&ndash;&gt;-->
+
+
+    </main>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+</body>
+</html>
