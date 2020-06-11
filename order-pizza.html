@@ -10,12 +10,12 @@
 </head>
 <body>
     <main>
+<!--        Nav Bar Area-->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="#">Pizza World</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav mr-0 mt-2 mt-lg-0">
                     <li class="nav-item active">
@@ -24,113 +24,199 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Menu</a>
                     </li>
-<!--                    <li class="nav-item">-->
-<!--                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>-->
-<!--                    </li>-->
                 </ul>
                 <form class="form-inline mr-auto my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="search" placeholder="Zip Code">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search stores near you</button>
+                    <button class="btn btn-outline-transparent border border-dark my-2 my-sm-0" type="submit">Search stores near you</button>
                 </form>
                 <div class mr-0 ="login">
-                    <a href="#"><i class="fas fa-user"></i>Sign Up</a>
+                    <svg class="bi bi-person-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                </svg></i><a href="#">Sign Up</a>
                 </div>
             </div>
         </nav>
-        <div class="d-sm-none d-md-block">
+<!--        Container and H1-->
+        <div class="d-none d-md-block">
             <div class="container .d-flex p-2">
-
                 <div class="jumbotron jumbotron-fluid">
-                    <img src="img/pizza.png" class="img-fluid" alt="Responsive image">
                     <h1 class="display-4">Welcome to Pizza World!!</h1>
                 </div>
             </div>
         </div>
+<!--        Tab Area-->
         <h2>Build Your Own Pizza!
         </h2>
+        <!-- Nav tabs -->
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item">
-                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+                <a class="nav-link active" id="crust" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><span class="badge badge-secondary">1</span> Size and Crust</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+                <a class="nav-link" id="cheese" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"><span class="badge badge-secondary">2</span> Cheese and Sauce</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+                <a class="nav-link" id="toppings" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false"><span class="badge badge-secondary">3</span> Toppings</a>
             </li>
         </ul>
-        <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="crust" role="tabpanel" aria-labelledby="crust-tab">hello</div>
-            <div class="tab-pane fade" id="cheese" role="tabpanel" aria-labelledby="cheese-tab">are</div>
-            <div class="tab-pane fade" id="toppings" role="tabpanel" aria-labelledby="toppings-tab">you</div>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
+<!--                Size and Crust Tab-->
+                <div class="tab-content" id="myTabContent active">
+                                <div class="tab-pane show fade in active" id="crustcard" role="tabpanel" aria-labelledby="crust-tab">
+                                    <div class="card">
+                                        <div class="card-header list-group-item list-group-item-action active">
+                                            Chose Size and Crust
+                                        </div>
+                                        <ul class="list-group m-3">
+                                            <li class="list-group-item list-group-item-secondary">Hand Tossed</li>
+                                            <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste.</li>
+                                            <li class="list-group-item"><input type="radio" name="size"> Small (10")</li>
+                                            <li class="list-group-item"><input type="radio" name="size"> Medium (12")</li>
+                                        </ul>
+                                        <ul class="list-group m-3">
+                                            <li class="list-group-item list-group-item-secondary">Crispy Thin</li>
+                                            <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio.</li>
+                                            <li class="list-group-item"><input type="radio" name="size"> Medium (12")</li>
+                                            <li class="list-group-item"><input type="radio" name="size"> Large (14")</li>
+                                        </ul>
+                                        <div class="input-group-append mb-3 px-3 bg-light">
+                                            <a href="profile" class="btn btn-primary ml-auto" type="button"> Next Step ></button></a>
+                                        </div>
+                                    </div>
+                                </div>
+                </div>
+            </div>
+
+            <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+<!--                Cheese and Sauce Tab-->
+                <div class="tab-content" id="myTabContent1">
+                    <div class="tab-pane show fade in active" id="cheesecard" role="tabpanel" aria-labelledby="cheese-tab">
+                        <div class="card">
+                            <div class="card-header list-group-item list-group-item-action active ">
+                                Choose cheese and sauce
+                            </div>
+                            <ul class="list-group m-3">
+                                <li class="list-group-item list-group-item-secondary">Cheese</li>
+                                <li class="list-group-item">How Much?
+                                    <select class="custom-select ml-1">
+                                        <option>Light</option>
+                                        <option selected>Normal</option>
+                                        <option>Extra</option>
+                                        <option>Double</option>
+                                    </select>
+                                </li>
+                            </ul>
+                            <ul class="list-group m-3">
+                                <li class="list-group-item list-group-item-secondary">Sauce</li>
+                                <li class="list-group-item">What type?
+                                    <select class="custom-select ml-1">
+                                        <option selected>Robust Inspired Tomato Sauce</option>
+                                        <option>Marinara Sauce</option>
+                                        <option>BBQ Sauce</option>
+                                        <option>Alfredo Sauce</option>
+                                    </select></li>
+                                <li class="list-group-item">How much?
+                                    <select class="custom-select ml-1">
+                                        <option selected>Light</option>
+                                        <option selected>Normal</option>
+                                        <option>Extra</option>
+                                    </select>
+                                </li>
+                            </ul>
+                            <div class="input-group-clearfix mb-3 px-3 bg-light">
+                                <a href="profile" class="btn btn-primary float-right" type="button"> Next Step ></button></a>
+                                <a href="profile" class="btn btn-primary float-right" type="button"> < Previous Step</button></a>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">
+<!--                Toppings Tab-->
+                <div class="tab-content" id="myTabContent2">
+                    <div class="tab-pane show fade in active" id="toppingscard" role="tabpanel" aria-labelledby="toppings-tab">
+                        <div class="card">
+                            <div class="card-header list-group-item list-group-item-action active ">
+                                Choose Toppings
+                            </div>
+                            <ul class="list-group m-3">
+                                <li class="list-group-item list-group-item-secondary">Choose Meats</li>
+                                    <ul class="list-group">
+                                        <li class="list-group-item"><input type="checkbox" name="topping"> Beef</li>
+                                        <li class="list-group-item"><input type="checkbox" name="topping"> Ham</li>
+                                        <li class="list-group-item"><input type="checkbox" name="topping"> Philly Steak</li>
+                                        <li class="list-group-item"><input type="checkbox" name="topping"> Bacon</li>
+                                    </ul>
+                            </ul>
+                            <ul class="list-group m-3">
+                                <li class="list-group-item list-group-item-secondary">Choose Non-Meats</li>
+                                <ul class="list-group">
+                                    <li class="list-group-item"><input type="checkbox" name="topping"> Green Peppers</li>
+                                    <li class="list-group-item"><input type="checkbox" name="topping"> Mushrooms</li>
+                                    <li class="list-group-item"><input type="checkbox" name="topping"> Onions</li>
+                                    <li class="list-group-item"><input type="checkbox" name="topping"> Jalepeno Peppers</li>
+                                </ul>
+                            </ul>
+                            <div class="input-group-append mb-3 px-3 bg-light">
+                                <a href="profile" class="btn btn-primary ml-auto" type="button"> Checkout <svg class="bi bi-cart3" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                                </svg></button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">...3</div>
         </div>
-<!--        size and crust tab/ cheese and sauce and toppings, first page-->
-<!--        <ul class="nav nav-tabs" id="myTab" role="tablist">-->
-<!--            <li class="nav-item d-flex justify-content-between align-items-center mx-2">-->
-<!--                <a class="nav-link active" id="size-and-crust-tab" data-toggle="tab" href="#size-and-crust-tab" role="tab"><span class="badge badge-secondary badge-pill">1</span>Size and Crust</a>-->
-<!--            </li>-->
-<!--            <li class="nav-item d-flex justify-content-between align-items-center mx-2">-->
-<!--                <a class="nav-link" id="cheese-and-sauce tab" data-toggle="tab" href="#cheese-and-sauce tab" role="tab"><span class="badge badge-secondary badge-pill">2</span>Cheese and Sauce</a>-->
-<!--            </li>-->
-<!--            <li class="nav-item d-flex justify-content-between align-items-center mx-2">-->
-<!--                <a class="nav-link" id="toppings" data-toggle="tab" href="#toppings" role="tab"><span class="badge badge-secondary badge-pill">3</span>Toppings</a>-->
-<!--            </li>-->
-<!--        </ul>-->
-<!--        <div class="tab-content" id="myTabContent">-->
-<!--            <div class="tab-pane fade show active" id="size_and_crust" role="tabpanel" aria-labelledby="size-and-crust-tab">-->
-<!--            <div class="card">-->
-<!--                <div class="card-title">-->
-<!--                    <h3>Chose size and Crust</h3>-->
-<!--                </div>-->
-<!--&lt;!&ndash;                hand tossed option&ndash;&gt;-->
-<!--                <div class="card-body">-->
-<!--                    <h4>Hand Tossed</h4>-->
-<!--                    <input class="form-control" type="text" placeholder="Garlic seasoned crust with a rich, buttery taste." readonly>-->
-<!--                <div class="form-check">-->
-<!--                    <input class="form-check-input" type="radio" name="size_option" id="small_option" value="small_option">-->
-<!--                    <label class="form-check-label" for="small_option">-->
-<!--                        Small(10")-->
-<!--                    </label>-->
-<!--                </div>-->
-<!--                <div class="form-check">-->
-<!--                    <input class="form-check-input" type="radio" name="size_option" id="medium_option" value="medium_option">-->
-<!--                    <label class="form-check-label" for="medium_option">-->
-<!--                        Medium(12")-->
-<!--                    </label>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--&lt;!&ndash;                Crispy options&ndash;&gt;-->
-<!--            <div class="card-body">-->
-<!--                <h4>Crispy Thin</h4>-->
-<!--                <input class="form-control" type="text" placeholder="Thin enough for optimum crispy to crunchy ratio" readonly>-->
-<!--                <div class="form-check">-->
-<!--                    <input class="form-check-input" type="radio" name="size_option" id="crispy_medium" value="crispy_option">-->
-<!--                    <label class="form-check-label" for="crispy_medium">-->
-<!--                        Medium(12")-->
-<!--                    </label>-->
-<!--                </div>-->
-<!--                <div class="form-check">-->
-<!--                    <input class="form-check-input" type="radio" name="size_option" id="large_option" value="large_option">-->
-<!--                    <label class="form-check-label" for="large_option">-->
-<!--                        Large(14")-->
-<!--                    </label>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="input-group mb-3">-->
-<!--                <div class="input-group-append ml-auto px-md-5">-->
-<!--                    <a href="#cheese-and-sauce tab" class="badge badge-primary p-3">Next Step ></a>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--&lt;!&ndash;        cheese and sauce tab&ndash;&gt;-->
+
+
+
+
+        <!-- Tab panes -->
+
+<!--        Cards with the whole tab section-->
+
+<!--        <div class="tab-content" id="myTabContent active">-->
+<!--&lt;!&ndash;            Size and Crust Tab&ndash;&gt;-->
+<!--            <div class="tab-pane fade show active" id="crust" role="tabpanel" aria-labelledby="crust-tab">-->
+<!--                <div class="card">-->
+<!--                    <div class="card-header list-group-item list-group-item-action active">-->
+<!--                        Chose Size and Crust-->
+<!--                    </div>-->
+<!--                    <ul class="list-group m-3">-->
+<!--                        <li class="list-group-item list-group-item-secondary">Hand Tossed</li>-->
+<!--                        <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste.</li>-->
+<!--                        <li class="list-group-item"><input type="radio" name="size"> Small (10")</li>-->
+<!--                        <li class="list-group-item"><input type="radio" name="size"> Medium (12")</li>-->
+<!--                    </ul>-->
+<!--                    <ul class="list-group m-3">-->
+<!--                        <li class="list-group-item list-group-item-secondary">Crispy Thin</li>-->
+<!--                        <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio.</li>-->
+<!--                        <li class="list-group-item"><input type="radio" name="size"> Medium (12")</li>-->
+<!--                        <li class="list-group-item"><input type="radio" name="size"> Large (14")</li>-->
+<!--                    </ul>-->
+<!--                    <div class="input-group-append">-->
+<!--                        <button class="btn btn-primary ml-auto" type="button"> Next Step > </button>-->
+<!--                    </div>-->
+
+<!--            Cheese and Sauce Tab-->
+
+
+<!--            Toppings-->
+
 
 
     </main>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 </body>
 </html>
