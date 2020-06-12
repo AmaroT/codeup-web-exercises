@@ -1,19 +1,7 @@
 /*create rules for jumbotron and h1 to be hidden with small screens. */
 
-.jumbotron{
-    background: url("https://java.codeup.com/examples/bootstrap/pizza.png");
 
-}
-h1 {
-    position: absolute;
-    z-index: 999;
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    top: 90px;
-    width: calc(90% - 1em);
-    padding: 0;
-}
+
 .jumbotron-fluid{
     position: relative;
     display: inline-block;
@@ -21,7 +9,6 @@ h1 {
     height: 100%;
     margin: 0 auto;
     padding: 0;
-    overflow: hidden;
 
 }
 h1 {
