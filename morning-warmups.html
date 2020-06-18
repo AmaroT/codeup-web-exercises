@@ -74,8 +74,27 @@
      }
      console.log(isEven(2));
      console.log(isEven(3));
+//Wrtie atleast 3 different ways to print out the first 10 evens.
 
+    var x = 0;
+    while(x <= 20){
+        x += 2;
+        console.log(x);
+    }
 
+    function printEven(x) {
+        for(let x = x; x < 20; x++) {
+            if (x % 2 == 0) {
+                console.log(x);
+            }
+        }
+    }
+
+    for (x = 0; x <= 20; x++){
+        if( x % 2 == 0){
+            console.log(x);
+        }
+    }
 </script>
 
 </body>
