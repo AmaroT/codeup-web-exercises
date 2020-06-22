@@ -21,18 +21,20 @@
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
-//
-// function analyzeColor(colorName) {
-//     if (colorName === 'blue') {
-//         alert('blue is the color of the sky');
-//     }else if (colorName === 'red') {
-//         alert('Strawberries are red');
-//     }else if (colorName === 'cyan') {
-//         alert("I don't know anything about cyan");
-//     }else {
-//         alert("Pick another Color");
-//     }return colorName;
-// }console.log(analyzeColor());
+
+// var color;
+// function analyzeColor(color){
+//     if(color === 'blue'){
+//         return alert("Blue is the color of the sky");
+//     } else if (color ===  'red'){
+//         return alert("Strawberries are Red");
+//     } else if (color === 'cyan'){
+//         return alert("I do not know anything about cyan");
+//     } else{
+//         return alert("Please chose a color that is either Red, Blue or Cyan");
+//     }
+// }
+// console.log(analyzeColor('blue'));
 
 // Don't change the next two lines!
 // These lines create two variables for you:
@@ -45,12 +47,13 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * TODO:
  * Pass the `randomColor` variable to your function and console.log the results.
  * You should see a different message every time you refresh the page
- */
-// function randomColor (colors){
+
+ **/
+// function randomColor(){
 //     return colors;
-// }console.log(randomColor);
-/**
- * TODO:
+// }
+// console.log(randomColor);
+ /** TODO:
  * Refactor your above function to use a switch-case statement
  */
 // switch (randomColor) {
@@ -65,9 +68,10 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * function to show it to the user.
  */
 // var color = prompt("Pick a Color");
-// function analyzeColor (color){
+// function analyzeColor (){
 //     return color;
-// }alert(analyzeColor(color));
+// }
+// alert(analyzeColor());
 /* ########################################################################## */
 
 /**
@@ -88,25 +92,33 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  *
  * Test your function by passing it various values and checking for the expected
  * return value.
- */
-var luckyNumber =prompt("Feeling Lucky?? Pick a number 1 - 5!");
-var totalAmoumnt = prompt("What is your Total Amount?");
+//  */
+var luckyNumber = prompt("Feeling Lucky?? Pick a number 1 - 5!");
+var totalAmount = prompt("What is your Total Amount?");
+
+
 function calculateTotal (luckyNumber, totalAmount) {
-    if (luckyNumber === 1) {
-        alert("Congratulations! You won a 10% discount! Your Amount is : $" + (totalAmount * .9));
-    } else if (luckyNumber === 2) {
-        alert("Congratulations! You won a 25% discount!! Your Amount is : $" + (totalAmount * .75));
-    } else if (luckyNumber === 3) {
-        alert("Congratulations! You won a 35% discount!! Your Amount is :  $" + (totalAmount * .65));
-    } else if (luckyNumber === 4) {
-        alert("Congratulations! You won a 50% discount!! Your Amount is :  $" + (totalAmount * .50));
-    } else if (luckyNumber === 5) {
-        alert("Congratulations! You won a 100% discount!! Your Amount is :  $" + (totalAmount * 0));
-    } else {
-        alert("Sorry, you did not win a discount");
-    }
+
+    // if (luckyNumber === 1) {
+    //     alert("You get 10%" + totalAmount);
+    //     // alert("Congratulations! You won a 10% discount! Your Amount is : $" + totalAmount - totalAmount * .1);
+    // } else if (luckyNumber === 2) {
+    //     alert("You get 25%" + totalAmount);
+    //      // alert("Congratulations! You won a 25% discount!! Your Amount is : $" + totalAmount - totalAmount * .25);
+    //  } else if (luckyNumber === 3) {
+    //     alert("You get 35%" + totalAmount);
+    //      // alert("Congratulations! You won a 35% discount!! Your Amount is :  $" + totalAmount - totalAmount * .35);
+    //  } else if (luckyNumber === 4) {
+    //     alert("You get 50%" + totalAmount);
+    //     // alert("Congratulations! You won a 50% discount!! Your Amount is :  $" + totalAmount - totalAmount * .50);
+    // } else if (luckyNumber === 5) {
+    //     alert("You get 100%" + totalAmount);
+    //      // alert("Congratulations! You won a 100% discount!! Your Amount is :  $" + totalAmount - totalAmount * 1);
+    //  } else if (luckyNumber === 0) {
+    //     alert("Sorry, you did not win a discount"+ totalAmount);
+    // }
 }
-console.log(calculateTotal(luckyNumber,totalAmoumnt));
+console.log(calculateTotal(luckyNumber,totalAmount));
 
 /**
  * TODO:
@@ -135,3 +147,25 @@ console.log(calculateTotal(luckyNumber,totalAmoumnt));
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+
+// var response = confirm("Do you want to input a number?");
+// var userNumber;
+// function checkResponse (){
+//     if(response === true) {
+//         userNumber = prompt("Pick any number");
+//     } if(userNumber % 2 === 0) {
+//         alert("Your number is even!");
+//     } else if (userNumber % 2 === 1) {
+//         alert("your number is odd!");
+//     }  if (userNumber + 100) {
+//         alert("Your number plus 100 is: " + userNumber);
+//     } if (userNumber > 0) {
+//         alert("Your number is a positive number!");
+//     } else if (userNumber < 0) {
+//         alert("Your number is a negative number!");
+//     } else {
+//         alert("You did not want to pick a number.");
+//     }
+// }
+// console.log(checkResponse(response));
+
