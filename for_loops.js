@@ -19,8 +19,15 @@
 //
 
 // number 4
+// for (i = 1; i < 10; i ++){
+//     let s = (i + '').repeat(i);
+//     console.log(s);
+// }
+
+// number 5
 // Create a for loop that uses console.log to create the output shown below.
 
-// for(let x = 100; x >= 5;x = x - 5){
+// for(let x = 100; x >= 5;x -= 5){
 //     console.log(x);
 // }
+

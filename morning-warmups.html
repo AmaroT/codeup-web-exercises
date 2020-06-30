@@ -19,91 +19,136 @@
     // }
    // Write a js function that will take in a number and from there count the net number
 
-   function countUp5 (num) {
-       for( i = 0; i < 5; i++) {
-           console.log(num++);
-       }
-   }
-    countUp5(5);
-   // Write a function that returns seven
-    function returnSeven() {
-        return 7;
-    }
-    console.log(returnSeven());
+   // function countUp5 (num) {
+   //     for( i = 0; i < 5; i++) {
+   //         console.log(num++);
+   //     }
+   // }
+   //  countUp5(5);
+   // // Write a function that returns seven
+   //  function returnSeven() {
+   //      return 7;
+   //  }
+   //  console.log(returnSeven());
 
 //Write a Javascript function that returns the length of a string passed through it.
-    function lengthOfString (string) {
-        return string.length;
-    }
-    console.log(lengthOfString("Good Morning"));
+//     function lengthOfString (string) {
+//         return string.length;
+//     }
+//     console.log(lengthOfString("Good Morning"));
 
 //Write a JS function that returns the number of characters in a string passed through it.
 
-    function numberOfCharactersInString(str) {
-        return lengthOfString(str);
-    }
-    console.log(lengthOfString("Good Morning again!"));
+    // function numberOfCharactersInString(str) {
+    //     return lengthOfString(str);
+    // }
+    // console.log(lengthOfString("Good Morning again!"));
 
 //    Write a JS function that will return he diameter of a circle with a radius of the number passed through it.
-    function diameterOfCircle (radius) {
-        return 2 * radius;
-    }
-    console.log(diameterOfCircle(5));
+//     function diameterOfCircle (radius) {
+//         return 2 * radius;
+//     }
+//     console.log(diameterOfCircle(5));
     //Write a function that returns the squareroot of a number that passes through it
-    function squareRoot (x) {
-        return Math.sqrt(x);
-    } console.log(squareRoot(9));
+    // function squareRoot (x) {
+    //     return Math.sqrt(x);
+    // } console.log(squareRoot(9));
 //    Write a JS function that returns the argument passed.
-    function func1(a, b, c) {
-        return func1(1, 2, 3);
-
-    }console.log(func1[1]);
-    console.log(func1[2]);
-    console.log(func1[3]);
+//     function func1(a, b, c) {
+//         return func1(1, 2, 3);
+//
+//     }console.log(func1[1]);
+//     console.log(func1[2]);
+//     console.log(func1[3]);
 
 //    Write a JS function that returns a string representing the type argument passed through it.
-    function typeOfInput (input) {
-        return typeof input;
-    }console.log(typeOfInput(1));
-    console.log(typeOfInput("Amaro"));
+//     function typeOfInput (input) {
+//         return typeof input;
+//     }console.log(typeOfInput(1));
+//     console.log(typeOfInput("Amaro"));
 
     // Write a JavaScript function that returns the boolean true if a number passed through is even
 
-     function isEven(number) {
-         return number % 2 === 0;
-     }
-     console.log(isEven(2));
-     console.log(isEven(3));
+     // function isEven(number) {
+     //     return number % 2 === 0;
+     // }
+     // console.log(isEven(2));
+     // console.log(isEven(3));
 //Wrtie atleast 3 different ways to print out the first 10 evens.
 
-    var x = 0;
-    while(x <= 20){
-        x += 2;
-        console.log(x);
-    }
+    // var x = 0;
+    // while(x <= 20){
+    //     x += 2;
+    //     console.log(x);
+    // }
 
-    function printEven(x) {
-        for(let x = x; x < 20; x++) {
-            if (x % 2 == 0) {
-                console.log(x);
-            }
-        }
-    }
+    // function printEven(x) {
+    //     for(let x = x; x < 20; x++) {
+    //         if (x % 2 == 0) {
+    //             console.log(x);
+    //         }
+    //     }
+    // }
 
-    for (x = 0; x <= 20; x++){
-        if( x % 2 == 0){
-            console.log(x);
-        }
-    }
+    // for (x = 0; x <= 20; x++){
+    //     if( x % 2 == 0){
+    //         console.log(x);
+    //     }
+    // }
 // that modifies a variable lights
 
-    var light = "This is a light switch at the Off position";
-    function flipLight(){
-        light = "This light has been turned on";
+    // var light = "This is a light switch at the Off position";
+    // function flipLight(){
+    //     light = "This light has been turned on";
+    // }
+    // console.log(light);
+    // flipLight();
+    // console.log(light);
+
+// 6/30/2020 Morning Pushup -
+// Make a loop, from 1 - 10, labels odds and evens
+//     for loop format
+// for(i = 1; i <= 10; i++){
+//     if(i % 2 === 0){
+//         console.log(i + " is even");
+//     }else if(i % 2 === 1){
+//         console.log(i + " is odd")
+//     }
+// }
+//    function format with while loop
+// var countTo10 = function() {
+//     var num = 1;
+//     while (num <= 10) {
+//         if (num % 2 === 0) {
+//             console.log(num + " is even");
+//         } else {
+//             console.log(num + " is odd")
+//         }
+//         num++;
+//     }
+// }countTo10();
+
+
+    // let addition = function(a,b){
+    //     // while(a > 0){
+    //     //     a--;
+    //     //     b++;
+    //     // }
+    //     // return b;
+    //     for (; a > 0;a--){
+    //         b++;
+    //     } return b;
+    // }
+
+    let multiply = function(a, b){
+        let answer = 0;
+        while(b > 0){
+            b--;
+            answer += a;
+        }
+        return answer;
     }
-    console.log(light);
-    flipLight();
-    console.log(light);
+    console.log(multiply(2,7));
 
 </script>
 

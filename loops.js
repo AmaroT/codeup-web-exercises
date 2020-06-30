@@ -40,19 +40,19 @@ console.log("We are done")
 
 
 // final revision
-// let x = Math.floor((Math.random() * 10) + 1);
-// console.log(x);
-// let guess;
-// do {
-//     guess = prompt("I chose a number between 1 and 10. Can you guess that it is?");
-//     if(guess != x){
-//         continue;
-//     }else{
-//         alert("You guessed the number!!");
-//         break;
-//     }
-// }while(true);
-// console.log("We are done")
+let x = Math.floor((Math.random() * 10) + 1);
+console.log(x);
+let guess;
+do {
+    guess = prompt("I chose a number between 1 and 10. Can you guess that it is?");
+    if(guess != x){
+        continue;
+    }else{
+        alert("You guessed the number!!");
+        break;
+    }
+}while(true);
+console.log("We are done")
 
 // while loop sample
 let x = 1;
