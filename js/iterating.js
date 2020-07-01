@@ -13,13 +13,16 @@
      * Create a log statement that will log the number of elements in the names
      * array.
      */
-    console.log(names.length);
+    console.log("The number of element in the names array is" + names.length + ".");
     /**
      * TODO:
      * Create log statements that will print each of the names individually by
      * accessing each element's index.
      */
-    console.log(names);
+    console.log(names[0]);
+    console.log(names[1]);
+    console.log(names[2]);
+    console.log(names[3]);
 
     /**
      * TODO:
@@ -52,10 +55,25 @@
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
 
+    let elements = [1,2,3,4,5];
 
-    var numbers = [1, 2, 3, 4, 5];
-    console.log(numbers[0]);
-    console.log(numbers[1]);
-    console.log(numbers[4]);
+
+    let first = function(arr){
+        return arr[0];
+    }
+    let second = function (arr){
+        return arr[1];
+    }
+    let last = function(arr){
+        return arr[arr.length -1];
+    }
+
+    console.log('The first element: ' + first(elements));
+    console.log('The second element: ' + second(elements));
+    console.log('The last element: ' + last(elements));
+
+
+
+
 
 })();

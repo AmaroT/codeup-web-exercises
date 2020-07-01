@@ -14,15 +14,15 @@
 // fruits = ["Banana", "Orange", "Apple", "Mango"];
 // for( var i = 0;i < fruits.length;i++);
 // console.log("The fruit at index " + i + "is" + fruits[i] + ".");
-fruits = ["Banana", "Orange", "Apple", "Mango"];
+// fruits = ["Banana", "Orange", "Apple", "Mango"];
 // for (var i = 0; i < fruits.length; i++) {
 //     console.log("The fruit at index " + i + " is " + fruits[i] + ".");
 // }
 
-fruits = ["Banana", "Orange", "Apple", "Mango"];
-fruits.forEach(function(fruit, index){
-    console.log("the fruit at index " + index + " is " + fruit + ".");
-});
+// fruits = ["Banana", "Orange", "Apple", "Mango"];
+// fruits.forEach(function(fruit, index){
+//     console.log("the fruit at index " + index + " is " + fruit + ".");
+// });
 // function myTwoParamFunction(shape, index){
 //     alert("the shape at index " + index + " is " + shape + ".");
 // }
