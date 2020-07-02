@@ -26,3 +26,27 @@
 // function myTwoParamFunction(shape, index){
 //     alert("the shape at index " + index + " is " + shape + ".");
 // }
+
+// var week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+// console.log(week);
+// console.log(week.length);
+// console.log(week.unshift("Sunday"));
+// console.log(week);
+// console.log(week.push("Saturday"));
+// console.log(week);
+
+var toDo = ["clothes", "trash", "lawn", "dishes", " garden"];
+console.log(toDo);
+console.log(toDo.pop());
+console.log(toDo.shift())
+console.log(toDo)
+
+var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet', 'red'];
+console.log(colors.indexOf("indigo"));
+
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+console.log(fruits.slice(1,3));
+console.log(fruits.reverse());
+console.log(fruits.sort());
+
+var fruitsStrings = "Banana",
