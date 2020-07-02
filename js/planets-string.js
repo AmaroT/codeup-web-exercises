@@ -1,8 +1,8 @@
-// (function(){
-//     "use strict";
+(function(){
+    "use strict";
 
-    // var planetsString = "Mercury|Venus|Earth|Mars|Jupiter|Saturn|Uranus|Neptune";
-
+    var planetsString = "Mercury|Venus|Earth|Mars|Jupiter|Saturn|Uranus|Neptune";
+    var planetsArray;
 
     /**
      * TODO:
@@ -10,7 +10,7 @@
      * planetsArray.
      * console.log planetsArray to check your work
      */
-    // let planetsArray = planetsString.split(',');
+
     // console.log(planetsArray);
 
     /**
@@ -24,8 +24,4 @@
      * string, and <li> tags around each planet.
      */
 
-// })();
-
-var planetsString = "Mercury|Venus|Earth|Mars|Jupiter|Saturn|Uranus|Neptune";
-let planetsArray = planetsString.split(',');
-console.log(planetsArray);
+})();
