@@ -11,10 +11,10 @@
      *  > console.log(person.firstName) // "Rick"
      *  > console.log(person.lastName) // "Sanchez"
      */
-let person = {
-    firstName : "Amaro",
-        lastName : "Terrazas"
-    };
+    let person = {
+        firstName: "Amaro",
+        lastName: "Terrazas"
+    }
     console.log(person.firstName);
     console.log(person.lastName);
     /**
@@ -28,7 +28,7 @@ let person = {
      */
     person.sayHello = function(){
         console.log("Hello from " + person.firstName + " " + person.lastName + "!");
-    };
+    }
     person.sayHello();
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -49,11 +49,11 @@ let person = {
         {name: 'Ryan', amount: 250},
         {name: 'George', amount: 320}
     ];
-
-    shoppers.forEach(function (el, idx){
+    shoppers.forEach(function(el, idx){
         let discounted = (el.amount > 200) ? el.amount * 0.88 : el.amount;
-        console.log(`${el.name} | ${el.amount} | ${discounted}`);
+        console.log(`${el.name}'s total was ${el.amount} and after qualified purchase discount  = $${discounted}`);
     });
+
 
 
 
@@ -71,48 +71,40 @@ let person = {
      */
     let books = [
         {
-            bookNumber: "Book # 1",
-            title: "In Search of Lost Time",
+            title: "To Kill a Mockingbird",
             author: {
-                firstName: "Marcel",
-                lastName: "Proust"
-            }
+                firstName: "Harper",
+                lastName: "Lee"
+            },
         },
         {
-            bookNumber: "Book # 2",
-            title: "Ulysses",
+            title: "1984",
             author: {
-                firstName: "James",
-                lastName: "Joyce"
-            }
-
+                firstName: "George",
+                lastName: "Orwell"
+            },
         },
         {
-            bookNumber: "Book # 3",
-            title: "Don Quixote",
+            title:"Harry Potter and the Philosopher's Stone",
             author: {
-                firstName: "Miguel",
-                lastName: " Cervantes"
-            }
+                firstName: "J.K",
+                lastName: "Rowling"
+            },
         },
         {
-            bookNumber: "Book # 4",
+            title:"The Lord of the Rings",
+            author: {
+                firstName: "J.R.R",
+                lastName: "Tolkien"
+            },
+        },
+        {
             title: "The Great Gatsby",
             author: {
-                firstName: "Scott",
+                firstName:"F.Scott",
                 lastName: "Fitzgerald"
-
-            }
+            },
         },
-        {
-            bookNumber: "Book # 5",
-            title: "One Hundred Years of Solitude",
-            author: {
-                firstName: "Gabriel",
-                lastName: "Marquez"
-            }
-        }
-
     ];
     console.log(books[1].title);
     console.log(books[1].author.firstName);
@@ -144,12 +136,15 @@ let person = {
      *      ---
      *      ...
      */
-    let bookList = function() {
-        for (let n = 0; n < books.length; n++)
-            console.log(books[n].bookNumber + " " + books[n].title + " " + books[n].author.firstName + " " + books[n].author.lastName);
-
+    let bookList = function(){
+        for(let i = 0; i < books.length; i++){
+            console.log("Book # " + [i + 1]);
+            console.log("Title: " + books[i].title);
+            console.log("Author: " + books[i].author.firstName + " " + books[i].author.lastName);
+            console.log("---");
+        }
     }
-        console.log(bookList());
+    console.log(bookList());
 
 
 
@@ -163,26 +158,23 @@ let person = {
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
-const createBook = function(title, firstName, lastName){
-    let book = {};
-    book.title = title;
-    book.author = {};
-    book.author.firstname = firstName;
-    book.author.lastName = lastName;
-    return book;
-    // return {title, author:{firstName, lastName}}
-}
+
+    const createBook = function(title, firstName, lastName) {
+        let book = {};
+        book.title = title;
+        book.author = {};
+        book.author.firstName = firstName;
+        book.author.lastName = lastName;
+        return book;
+    }
 const showBookInfo = function(book, index){
-    console.log("Book # " + (index+1));
+    console.log("Book # " + (index + 1));
     console.log("Title: " + book.title);
-    console.log("Author: " + book.author.firstName + book.author.lastName);
-    console.log("---")
+    console.log("Author: " + book.author.firstName + " " + book.author.lastName);
+    console.log("---");
 }
 let books2 = [];
-books2.push(createBook("Salmon of Doubt","Douglass", "Adams"));
-
+books2.push(createBook("Salmon of Drought", "Douglass", "Adams"));
 books2.forEach(showBookInfo);
-
-
 
 })();
