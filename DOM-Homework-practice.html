@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Homework</title>
+</head>
+<body>
+<h1>DOM Exercise #1</h1>
+<p id="red-text">TODO: Change my text red!</p>
+<p id="bold-font">TODO: Make this text bold</p>
+<p id="helvetica-font">TODO: Make my font 'Helvetica'</p>
+<p class="log-me">TODO: Console log my innerHTML content to the console</p>
+<p class="log-me">TODO: Console log my outerHTML content to the console</p>
+<p class="log-me">TODO: Console log my class name to the console</p>
+<p class="log-me" id="i-have-an-id">TODO: Console log my attributes to the console</p>
+<h1>TODO: Replace all of these movies with your own top 3 movies using DOM</h1>
+<ol>
+    <li id="movie-1">Forrest Gump</li>
+    <li id="movie-2">Batman: The Dark Knight</li>
+    <li id="movie-3">Inception</li>
+</ol>
+<script>
+    var p1 = document.getElementById('red-text');
+    p1.style.color = 'red';
+
+    var p2 = document.getElementById('bold-font');
+    p2.style.fontWeight = 'bold';
+
+    var p3 = document.getElementById('helvetica-font');
+    p3.style.fontFamily = 'helvetica';
+
+    var p4 = document.getElementsByClassName('log-me');
+    console.log(p4[0].innerHTML);
+
+    var p5 = document.getElementsByClassName('log-me');
+    console.log(p5[1].outerHTML);
+    var p6 = document.getElementsByClassName('log-me');
+    console.log(p6[2].className);
+
+    var movies = document.getElementsByTagName("li");
+    var movieId1 = movies["movie-1"];
+    var movieId2 = movies["movie-2"];
+    var movieId3 = movies["movie-3"];
+    console.log(movieId1.innertext = "Cast Away");
+    console.log(movieId2.innertext = "Zodiac");
+    console.log(movieId3.innertext = "Remember The Titans");
+
+</script>
+</body>
+</html>
