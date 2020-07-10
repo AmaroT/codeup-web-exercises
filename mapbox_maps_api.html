@@ -2,9 +2,117 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Mapbox_maps_api</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>First_Mapbox_Maps</title>
+<!--    Map Box CSS-->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css' rel='stylesheet' />
+<!--    CSS-->
+    <style>
+        #map, #map2{
+        width: 100%;
+            height: 600px;
+        }
+    </style>
 </head>
 <body>
+<h1>My Visits in Bend, Oregon</h1>
+<p>Just to name a few places I've been too in Bend</p>
+<div id='map'></div>
+<h3 id="reverseGeo"></h3>
+<script src='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js'></script>
+<script src="js/keys.js"></script>
+<script src="js/mapbox-geocoder-utils.js"></script>
+<script>
+    const mainaddress = "777 NW Wall St# 200 Bend, OR 97701";
+    const locations = [
+        {
+            name: "McMenamins Pub & Brewery",
+            address: "700 NW Bond St, Bend, OR 97703",
+            website: "https://www.mcmenamins.com/old-st-francis-school?utm_source=Google%20Maps&utm_medium=Website%20Button&utm_campaign=OSF",
+            image: "https://lh5.googleusercontent.com/p/AF1QipOOSHBayLKTSd-RXb-jjWsicobdYlTYjOrveiBS=w408-h271-k-no"
+        },
+        {
+            name: "Sidelines Sportsbar & Grill",
+            address: "1020 NW Wall St, Bend, OR 97701",
+            website: "http://sidelines-bend.com/",
+            image: "https://lh5.googleusercontent.com/p/AF1QipNDOrByVbSjDuLK2oT0uqmG7P97XnJqgZJDPOQy=w408-h544-k-no"
+        },
+        {
+            name: "Deschutes River Trail",
+            address: "Deschutes River Trail, Bend, OR 97702",
+            website: "https://www.bendparksandrec.org/trail/deschutes-river-trail-awbrey-reach/",
+            image: "https://lh5.googleusercontent.com/p/AF1QipNw2aYfgAQa_xnen93Y3h5SKuQJKEs8tgoHyBWz=w408-h306-k-no"
+        },
+        {
+            name: "Deschutes Brewery Bend Public House",
+            address: "1044 NW Bond St, Bend, OR 97703",
+            website: "https://www.deschutesbrewery.com/pubs/bend/",
+            image: "https://lh5.googleusercontent.com/p/AF1QipP3UKiY-XrgfZuUBa-gk2SLOmmZ_Iow_dqyPFwe=w408-h240-k-no-pi0-ya331.08377-ro-0-fo100"
+        },
+    ];
+    let markers =[];
+    //map
+    mapboxgl.accessToken = mapboxKey;
+    let map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+        center: [-121.311587, 44.059599], // starting position [lng, lat]"N W
+        zoom: 11// starting zoom
+    });
+    // function geocode(search, token){
+    //     var baseUrl = 'https://api.mapbox.com';
+    //
+    // }
+    map.addControl(new mapboxgl.NavigationControl());
+    //Map Locations
+    const setMapLocations = function() {
+        geocode(mainaddress, mapboxKey).then(function (data) {
+            map.setCenter(data);
+        });
+        locations.forEach((e) => {
+            geocode(e.address, mapboxKey).then(function (data) {
+                let marker = new mapboxgl.Marker()
+                    .setLngLat(data)
+                    .addTo(map)
+                    .setPopup(new mapboxgl.Popup().setHTML(`<h4><a target="_blank" href="${e.website}">${e.name}</a></h4>`))
+                    .getElement();
+                markers.push(marker);
 
+            });
+        });
+    }
+    setMapLocations();
+    //Marker for the Location Deschutes Brewery & Public House
+    // var marker = new mapboxgl.Marker()
+    //     .setLngLat([-121.311587, 44.059599])
+    //     .addTo(map);
+    //Marker Popup for The name of the location
+    // var popup = new mapboxgl.Popup()
+    //     .setLngLat([-121.311588, 44.059588])
+    //     .setHTML("<h1>Dechutes Brewery & Public House</h1>")
+    //     .addTo(map)
+    //Onclick Popup
+    // var popupInfo = new mapboxgl.Popup()
+    // .setHTML("<h2>Deschutes Public House</h2>" +
+    //     "<ul>"
+    //     + "<h5>Offshoot brewpup of well-known craft brewery offering locavore for lunch & dinner</h5>"
+    //     + "<li><h5>Live Performances</h5></li>"
+    //     + "<li><h5>Great Bar Food</h5></li>"
+    //     + "<li><h5>Fast Service</h5></li>"
+    //     + "<a><a target=\"_blank\" rel=\"noopener noreferrer\"  href='https://www.deschutesbrewery.com/pubs/bend/' </a>Check Us Out!</h4>"
+    //     + "</ul>")
+    // .addTo(map)
+    // marker.setPopup(popupInfo);
+
+    //Code for changing the cursor while the mouse is over the location.
+    map.on('mouseenter', 'places', function() {
+        map.getCanvas().style.cursor = 'pointer';
+    });
+    map.on('mouseleave', 'places', function() {
+        map.getCanvas().style.cursor = '';
+    });
+//
+
+</script>
 </body>
 </html>
