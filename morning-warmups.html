@@ -193,7 +193,42 @@
     //
     // }
 
+//Fibonacci Concept
+//     function fibonacci(num){
+//         var a = 1, b = 0, temp;
+//         while ( num >= 0){
+//             temp = a;
+//             a = a + b;
+//             b = temp;
+//             num--;
+//         }
+//         return b;
+//     }
+//     function fibonacci(num) {
+//         if(num <= 1) return 1;
+//         return fibonacci (num - 1) + fibonacci(num - 2);
+//     }
+//     console.log(fibonacci());
 
+    // function fibonacci(num, memo) {
+    //     memo = memo || {};
+    //
+    //     if (memo[num]) return memo[num];
+    //     if (num <= 1) return 1;
+    //
+    //     return memo[num] = fibonacci(num - 1, memo) + fibonacci(num - 2, memo);
+    // }console.log(fibonacci(50));
+//    Sequence is 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144
+    // N = 5 || 2 + 3
+    //F(n) = F(n - 1) + F(n -2)
+//     const fib = function(num){
+//         let fibonacci = [0, 1]
+//         for(let i = 0; i < num -1;i++){
+//             fibonacci.push(fibonacci[i] + fibonacci[i+1]);
+//         }
+//         return fibonacci;
+//     }
+// console.log(fib(10));
 
 </script>
 
