@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jquery_Exercises</title>
+</head>
+<body>
+<h1 class="odd" id="codeup">Header 1</h1>
+<h1 class="even" id="2">Header 2</h1>
+
+<p class ="odd" id="3">Paragraph 1</p>
+<p class="even" id="4">Paragraph 2</p>
+
+<ul class="odd" id="5">UnOrdered List 1
+    <li class="odd" id="6">
+        List Item 1
+    </li>
+</ul>
+<ul class="even" id="7">UnOrdered List 2
+    <li class="even" id="8">
+        List Item 2
+    </li>
+</ul>
+<div class="odd" id="9">
+    Divider 1
+</div>
+<div class="even" id="10">
+    Divider 2
+</div>
+<script src="./js/jquery-3.5.1.js"></script>
+<script>
+
+    $(document).ready(function() {
+    $('li').css({'font-size':'20px'});
+    $('h1, p, li').css({'background-color':'yellow'});
+    let contents = $('h1').html();
+    alert(contents);
+
+
+
+
+
+
+
+
+
+
+
+
+        // //js goes here that will execute when the page has finished loading
+        // // alert("Ready To Go!")
+        // // let stripes = document.getElementsByClassName('odd');
+        // // for(let i = 0;i < stripes.length;i++)
+        // //     stripes[i].style.backgroundColor = 'red';
+        //
+        // $('.odd').css({'background-color': 'lightgrey'});
+        // $('.odd').toggle(1000).toggle(1000).toggle(1000).toggle(1000);
+    })
+</script>
+</body>
+</html>
