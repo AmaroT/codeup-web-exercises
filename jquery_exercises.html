@@ -31,10 +31,22 @@
 <script>
 
     $(document).ready(function() {
-    $('li').css({'font-size':'20px'});
-    $('h1, p, li').css({'background-color':'yellow'});
-    let contents = $('h1').html();
-    alert(contents);
+
+    $('h1').click(function(){
+        $(this).css({'background-color':'#F01'})
+    });
+    $('p').dblclick(function(){
+        $(this).css({'font-size':'18px'})
+    });
+    $('li').hover(
+        function() {
+            $(this).css({color:'red'});
+
+    },
+    function(){
+        $(this).css({color: '#000'});
+    }
+    );
 
 
 
@@ -44,8 +56,10 @@
 
 
 
-
-
+        // $('li').css({'font-size':'20px'});
+        // $('h1, p, li').css({'background-color':'yellow'});
+        // let contents = $('h1').html();
+        // alert(contents);
 
         // //js goes here that will execute when the page has finished loading
         // // alert("Ready To Go!")
