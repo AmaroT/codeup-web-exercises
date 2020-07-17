@@ -3,6 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Jquery_Exercises</title>
+    <style>
+        .clicked{
+            background-color: blue;
+        }
+        .clicked2{
+            font-size: 18px;
+        }
+        .hover{
+            color:red;
+        }
+    </style>
 </head>
 <body>
 <h1 class="odd" id="codeup">Header 1</h1>
@@ -32,20 +43,20 @@
 
     $(document).ready(function() {
 
+
     $('h1').click(function(){
-        $(this).css({'background-color':'#F01'})
+        $(this).addClass('clicked')
     });
     $('p').dblclick(function(){
-        $(this).css({'font-size':'18px'})
+        $(this).addClass('clicked2')
     });
     $('li').hover(
         function() {
-            $(this).css({color:'red'});
-
-    },
-    function(){
-        $(this).css({color: '#000'});
-    }
+            $(this).addClass('hover');
+        },
+        function(){
+        $(this).removeClass('hover');
+        }
     );
 
 
