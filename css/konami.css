@@ -1,0 +1,27 @@
+html{
+    height: 100%;
+    width: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Chalkboard, sans-serif;
+}
+#container {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+h1, h3 {
+    display: flex;
+    justify-content: center;
+}
+#content {
+    width: 400px;
+    height: 400px;
+    background-size: 400px;
+    background-repeat: no-repeat;
+    position: relative;
+    margin: auto;
+}
