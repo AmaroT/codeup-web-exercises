@@ -48,6 +48,7 @@ function activateKonamiCheat() {
     $('#content').css("background-image", "url('./img/konamiCheatCode.png')")
         var audio = new Audio('./audio/konamiIntro.mp3');
         audio.play();
+        alert("Cheat Enabled! 30 lives added!");
 };
 //Donkey Kong Cheat
 let donkeyCode = ['b','a', 'down', 'b', 'up', 'down', 'down', 'y', 'a'];
@@ -70,6 +71,7 @@ function activateDonkeyCheat(){
     $('#content').css("background-image", "url('./img/donkey.jpg')");
         var donkeyAudio = new Audio('./audio/donkey.mp3');
         donkeyAudio.play();
+        alert("You swapped partners, Let's get some Bananas!");
 };
 // Scooby-Doo
 let scoobyCode = ['n', 'b', 'k', 's', 'd', 'l', 'v'];
@@ -92,6 +94,7 @@ function activateScoobyCheat(){
     $('#content').css("background-image", "url('./img/scooby.jpeg')");
         var scoobyAudio = new Audio('./audio/scooby.mp3');
         scoobyAudio.play();
+    alert("You entered a code to go straight to the monsters! Zoinks!!");
 }
 //Killer Instinct
 let killerCode = ['down','start/spacebar'];
@@ -114,6 +117,7 @@ function activateKillerCheat(){
     $('#content').css("background-image", "url('./img/killer.png')");
         let killerAudio = new Audio('./audio/killer.mp3');
         killerAudio.play();
+        alert('Time To Slay!');
 }
 //fzero
 let fCode = ['a', 'b', 'b', 'a', 'up', 'down', 'up', 'down'];
@@ -136,6 +140,7 @@ function activatefCheat(){
     $('#content').css("background-image", "url('./img/fzero.jpeg')");
     let fAudio = new Audio('./audio/fzero.jpeg');
     fAudio.play();
+    alert("lets race!");
 }
 //Super Mario World
 let marioCode = ['1', 'up'];
@@ -158,6 +163,7 @@ function activateMarioCheat(){
     $('#content').css("background-image", "url('./img/smw.jpg')");
         let marioAudio = new Audio('./audio/smw.mp3');
         marioAudio.play();
+        alert("Time to go save Peach.....again");
 }
 //Super Mario Bros
 let marioBrosCode = ['1', 'left', 'right', 'up', '1', 'down'];
@@ -180,6 +186,7 @@ function activateMarioBrosCheat(){
     $('#content').css("background-image", "url('./img/supermariobros.jpeg')");
         let marioBrosAudio = new Audio('./audio/supermariobros.mp3');
         marioBrosAudio.play();
+        alert("Peach was kidnapped!Lets go save her!")
 }
 //Metal Gear Solid
 let metalGearCode = ['a', 'a', 'a', 'left', 'left', 'left', 'right', 'right', 'right'];
@@ -202,5 +209,6 @@ function activateMetalGearCheat(){
     $('#content').css("background-image", "url('./img/foxhound.jpg')");
         let metalGearAudio = new Audio('./audio/metalgear.mp3');
         metalGearAudio.play();
+        alert("Big Boss!");
     }
 
