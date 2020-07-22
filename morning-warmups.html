@@ -266,6 +266,22 @@
     // console.log(evenlyDivisable(100, 2));
     // console.log(evenlyDivisable('str1', 'str2'));
 
+    //function that takes in a length in inches ( number), and converts it to a string listing the length in feet and inches
+    //Example: 78 => 6'6". non-number arguments return null
+
+
+    function standard (num){
+        if(typeof num === "number"){
+            return "" + Math.floor(num / 12) + "'" + (num % 12) + "\"";
+        }else{
+            return null;
+        }
+    }
+
+    console.log(73);
+    console.log(50);
+    console.log(twentythree);
+
 </script>
 
 </body>
