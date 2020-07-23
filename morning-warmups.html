@@ -270,18 +270,29 @@
     //Example: 78 => 6'6". non-number arguments return null
 
 
-    function standard (num){
-        if(typeof num === "number"){
-            return "" + Math.floor(num / 12) + "'" + (num % 12) + "\"";
+    // function standard (num){
+    //     if(typeof num === "number"){
+    //         return "" + Math.floor(num / 12) + "'" + (num % 12) + "\"";
+    //     }else{
+    //         return null;
+    //     }
+    // }
+    //
+    // console.log(73);
+    // console.log(50);
+    // console.log(twentythree);
+
+    //function that takes in a string and returns the number of words in the string.
+
+    function countWords(str) {
+
+        if(typeof str === "string"){
+            return str.split(" ").length;
         }else{
             return null;
         }
     }
-
-    console.log(73);
-    console.log(50);
-    console.log(twentythree);
-
+    console.log(countWords("dinosaur is walking down the aisle"));
 </script>
 
 </body>
