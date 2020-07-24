@@ -283,16 +283,38 @@
     // console.log(twentythree);
 
     //function that takes in a string and returns the number of words in the string.
-
-    function countWords(str) {
-
-        if(typeof str === "string"){
-            return str.split(" ").length;
+    //
+    // function countWords(str) {
+    //
+    //     if(typeof str === "string"){
+    //         return str.split(" ").length;
+    //     }else{
+    //         return null;
+    //     }
+    // }
+    // console.log(countWords("dinosaur is walking down the aisle"));
+    function fizzbuzz2(num) {
+        if(num % 3 === 0 && num % 5 === 0){
+            return "FizzBuzz";
+        }else if(num % 3 === 0){
+            return "Fizz";
+        }else if( num % 5 === 0){
+            return "Buzz";
+        } else if(typeof num !== "number"){
+            return null
         }else{
-            return null;
+            return num;
         }
     }
-    console.log(countWords("dinosaur is walking down the aisle"));
+
+    console.log(fizzbuzz2(44));
+    console.log(fizzbuzz2(55));
+    console.log(fizzbuzz2(33));
+
+
+
+
+
 </script>
 
 </body>

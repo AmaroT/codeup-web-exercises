@@ -5,15 +5,32 @@
     <title>Blog</title>
 </head>
 <body>
+<h1>Welcome to my Blog!</h1>
+<input type="button" value="Update Blog" id="update">What's New? Refresh to stay up to date!</button>
 <div id="posts">
-
+    <div id="updatePost"></div>
 </div>
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script>
     (function () {
         "use strict"
+    $(document).ready(function(){
+        $.ajax("data/blog.json").done(function(json) {
+            $.each(json,function(i, data){
+                $("#posts").append('<h1>' + data.title +'</h1><h4>' + data.date  + '</h4><p>' + data.content + '</p><p>' + data.categories + '</p>');
+            });
+        });
+    });
+    $("input").click(function(){
+            $.ajax("data/blog.json").done(function (json) {
+                $("#updatePost").html("")
+                $.each(json, function(i, data){
+                    $("#updatePost").append('<h1>' + data.title +'</h1><h4>' + data.date  + '</h4><p>' + data.content + '</p><p>' + data.categories + '</p>');
+                });
+            });
+        });
 
-    })();
+})();
 </script>
 </body>
 </html>
