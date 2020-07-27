@@ -9,8 +9,21 @@
     <style>
         #map{
             margin: auto;
-            width: 80%;
+            width: 70%;
             height: 600px;
+        }
+        .coordinates {
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            position: absolute;
+            bottom: 40px;
+            left: 10px;
+            padding: 5px 10px;
+            margin: 0;
+            font-size: 11px;
+            line-height: 18px;
+            border-radius: 3px;
+            display: none;
         }
     </style>
     <title>WeatherMap</title>
@@ -72,6 +85,8 @@
     </div>
 </div>
 <div id='map'></div>
+<pre id="coordinates" class="coordinates"></pre>
+
 <script src="./js/jquery-3.5.1.js"></script>
 <script src='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js'></script>
 <script src="js/mapbox-geocoder-utils.js"></script>
@@ -79,34 +94,6 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 <script src="js/keys.js"></script>
 <script src="js/weather_map.js"></script>
-<script>
-    let markers =[];
-    //map
-    mapboxgl.accessToken = mapboxKey;
-    let map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
-        center: [-121.311587, 44.059599], // starting position [lng, lat]"N W
-        zoom: 11// starting zoom
-    });
-    map.addControl(new mapboxgl.NavigationControl());
-    // locations.forEach((e) => {
-    //     geocode(e.address, mapboxKey).then(function (data) {
-    //         let marker = new mapboxgl.Marker()
-    //             .setLngLat(data)
-    //             .addTo(map)
-    //             .setPopup(new mapboxgl.Popup().setHTML(`<h4><a target="_blank" href="${e.website}">${e.name}</a></h4>`))
-    //             .getElement();
-    //         markers.push(marker);
-    //
-    //     });
-    // });
-    map.on('mouseenter', 'places', function() {
-        map.getCanvas().style.cursor = 'pointer';
-    });
-    map.on('mouseleave', 'places', function() {
-        map.getCanvas().style.cursor = '';
-    });
-</script>
+
 </body>
 </html>
