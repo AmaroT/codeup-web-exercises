@@ -130,7 +130,7 @@ $.get("http://api.openweathermap.org/data/2.5/onecall", {
             $("#pressure5").html("Pressure: " + pressure5 + " mb");
         }
         weather();
-        console.log(weather());
+
 })
 
 //map
@@ -147,7 +147,6 @@ function map(){
         accessToken: mapboxKey,
         mapboxgl: mapboxgl
     });
-    console.log(geocoder)
     map.addControl(new mapboxgl.NavigationControl());
     document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
 
@@ -155,7 +154,7 @@ function map(){
         draggable: true
     })
         .setLngLat([0, 0])
-        .addTo(map);
+        // .addTo(map);
 
     function onDragEnd() {
         var lngLat = marker.getLngLat();
@@ -295,8 +294,8 @@ function map(){
         }
         updateWeather();
         })
-    }
 
+    }
     marker.on('dragend', onDragEnd);
 }
 map();
