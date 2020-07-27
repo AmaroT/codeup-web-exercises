@@ -6,17 +6,17 @@ $.get("http://api.openweathermap.org/data/2.5/onecall", {
     part: "daily"
 }).done(function(data) {
     // let results = data.daily;
-    console.log(data)
+    // console.log(data)
     var date = new Date(data.daily['0'].dt * 1000);
     console.log(date);
-    $("#current-weather-date").html("Today is: " + date.toDateString());
+    $("#current-weather-date").html(date.toDateString());
     //ICON for current weather
     let icon = data.current.weather['0'].icon;
     let iconUrl = "http://openweathermap.org/img/w/" + icon + ".png";
     $("#icon").html("<img src='https://openweathermap.org/img/w/" + data.current.weather['0'].icon + ".png'>")
     // Assign the date string to .weather-date
     let description = data.current.weather[0].description;
-    $("#description").html("Description: " + description);
+    $("#description").html(description);
     //Current Temp
     let temp = data.current.temp;
     $("#temp").html("Currently it is: " + temp.toFixed(0) + " °F");
@@ -47,7 +47,7 @@ $.get("http://api.openweathermap.org/data/2.5/onecall", {
     $("#icon2").html("<img src='https://openweathermap.org/img/w/" + data.daily['1'].weather['0'].icon + ".png'>")
     // Assign the date string to .weather-date
     let description2 = data.daily['1'].weather[0].description;
-    $("#description2").html("Description: " + description2);
+    $("#description2").html(description2);
     //humidity
     let humidity2 = data.daily['1'].humidity;
     $("#humidity2").html("Humidity: " + humidity2 + '%');
@@ -72,7 +72,7 @@ $.get("http://api.openweathermap.org/data/2.5/onecall", {
     $("#icon3").html("<img src='https://openweathermap.org/img/w/" + data.daily['2'].weather['0'].icon + ".png'>")
     // Assign the date string to .weather-date
     let description3 = data.daily['2'].weather[0].description;
-    $("#description3").html("Description: " + description3);
+    $("#description3").html(description3);
     //humidity
     let humidity3 = data.daily['2'].humidity;
     $("#humidity3").html("Humidity: " + humidity3 + '%');
@@ -97,7 +97,7 @@ $.get("http://api.openweathermap.org/data/2.5/onecall", {
     $("#icon4").html("<img src='https://openweathermap.org/img/w/" + data.daily['3'].weather['0'].icon + ".png'>")
     // Assign the date string to .weather-date
     let description4 = data.daily['3'].weather[0].description;
-    $("#description4").html("Description: " + description4);
+    $("#description4").html(description4);
     //humidity
     let humidity4 = data.daily['3'].humidity;
     $("#humidity4").html("Humidity: " + humidity4 + '%');
@@ -122,7 +122,7 @@ $.get("http://api.openweathermap.org/data/2.5/onecall", {
     $("#icon5").html("<img src='https://openweathermap.org/img/w/" + data.daily['4'].weather['0'].icon + ".png'>")
     // Assign the date string to .weather-date
     let description5 = data.daily['4'].weather[0].description;
-    $("#description5").html("Description: " + description5);
+    $("#description5").html(description5);
     //humidity
     let humidity5 = data.daily['4'].humidity;
     $("#humidity5").html("Humidity: " + humidity5 + '%');
