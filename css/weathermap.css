@@ -1,0 +1,97 @@
+body{
+    height: 1000px;
+    background: linear-gradient(180deg, #090b0a, #c58400, #d05f03, #ff0000, #ccc80c, #e5ea1d, #f9ff0b);
+    background-size: 1400% 1400%;
+    -webkit-animation: AnimationName 20s ease infinite;
+    -moz-animation: AnimationName 20s ease infinite;
+    -o-animation: AnimationName 20s ease infinite;
+    animation: AnimationName 20s ease infinite;
+}
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 81%}
+    50%{background-position:100% 20%}
+    100%{background-position:0% 81%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 81%}
+    50%{background-position:100% 20%}
+    100%{background-position:0% 81%}
+}
+@-o-keyframes AnimationName {
+    0%{background-position:0% 81%}
+    50%{background-position:100% 20%}
+    100%{background-position:0% 81%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 81%}
+    50%{background-position:100% 20%}
+    100%{background-position:0% 81%}
+}
+header{
+    display: block;
+
+}
+h1 {
+    color: whitesmoke;
+    display: flex;
+    justify-content: flex-start;
+    text-shadow: 2px 4px black;
+    margin-left: 25px;
+}
+#current-weather-date, #weather-date-day2, #weather-date-day3, #weather-date-day4, #weather-date-day5{
+    background-color: peachpuff;
+    width: 75%;
+}
+/*GeoCoder*/
+.geocoder {
+    position: relative;
+    z-index: 1;
+    width: 50%;
+    left: 50%;
+    margin-left: -25%;
+    top: 10px;
+}
+
+.mapboxgl-ctrl-geocoder {
+    min-width: 100%;
+}
+.mapboxgl-ctrl-geocoder--pin-right{
+    visibility: hidden;
+}
+.mapboxgl-ctrl-geocoder--icon{
+    display: inline;
+    position: relative;
+    visibility: hidden;
+}
+.mapboxgl-ctrl-geocoder--input{
+    position: relative;
+    float: left;
+}
+/*Map*/
+#container2 {
+    position: relative;
+    top: 50px;
+}
+#map{
+    margin: auto;
+    width: 50%;
+    height: 400px;
+    top:50px;
+}
+/*container*/
+.container-fluid{
+    position: relative;
+    top: 4rem;
+}
+/*Cards*/
+.card{
+    opacity: .75;
+    border:2px solid peachpuff;
+    border-radius: 5px;
+    transition: all .25s ease-in-out;
+}
+.card:hover{
+    transform: scale(1.1);
+    border: 2px solid peachpuff;
+    box-shadow: 5px 5px peachpuff;
+}

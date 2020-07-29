@@ -9,118 +9,78 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link href='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css' rel='stylesheet' />
     <link rel="stylesheet" href="./css/weathermap.css">
-    <style>
-        #map{
-            margin: auto;
-            width: 70%;
-            height: 600px;
-        }
-        .coordinates {
-            background: rgba(0, 0, 0, 0.5);
-            color: #fff;
-            position: absolute;
-            bottom: 40px;
-            left: 10px;
-            padding: 5px 10px;
-            margin: 0;
-            font-size: 11px;
-            line-height: 18px;
-            border-radius: 3px;
-            display: none;
-        }
-        .geocoder {
-            position: relative;
-            z-index: 1;
-            top: 10px;
-            left: 50%;
-            padding: 20px;
-            /*border: 2px solid black;*/
-        }
-        .mapboxgl-ctrl-geocoder--input{
-            margin: auto;
-            left: 50%;
-
-
-
-        }
-        /*.mapboxgl-ctrl-geocoder--button{*/
-
-        /*    border: 5px solid green;*/
-        /*}*/
-        .mapboxgl-ctrl-geocoder mapboxgl-ctrl {
-            min-width: 100%;
-        }
-    </style>
     <title>WeatherMap</title>
 </head>
 <body>
-<h1>WeatherMap</h1>
-<div class="container">
-    <div class="card-group m-3">
-    <div class="card" style="width: 18rem;margin:auto">
-        <div id="current-weather-date" class="card-header mx-auto"> Weather Date</div>
-        <p class="card-text mx-auto" id="low-high-temp"></p>
-        <div class="card-img-center mx-auto" id="icon" alt="Weather Icon"></div>
-        <div class="card-body"></div>
-        <p class="card-text mx-auto" id="description"></p>
-        <p class="card-text mx-auto" id="humidity"></p>
-        <p class="card-text mx-auto" id="wind"></p>
-        <p class="card-text mx-auto" id="pressure"></p>
-    </div>
-    <div class="card" style="width: 18rem;margin:auto">
-        <div id="weather-date-day2" class="card-header mx-auto"> Weather Date</div>
-        <p class="card-text mx-auto" id="low-high-temp2"></p>
-        <div class="card-img-center mx-auto" id="icon2" alt="Weather Icon"></div>
-        <div class="card-body"></div>
-        <p class="card-text mx-auto" id="description2"></p>
-        <p class="card-text mx-auto" id="humidity2"></p>
-        <p class="card-text mx-auto" id="wind2"></p>
-        <p class="card-text mx-auto" id="pressure2"></p>
-    </div>
-    <div class="card" style="width: 18rem;margin:auto">
-        <div id="weather-date-day3" class="card-header mx-auto"> Weather Date</div>
-        <p class="card-text mx-auto" id="low-high-temp3"></p>
-        <div class="card-img-center mx-auto" id="icon3" alt="Weather Icon"></div>
-        <div class="card-body"></div>
-        <p class="card-text mx-auto" id="description3"></p>
-        <p class="card-text mx-auto" id="humidity3"></p>
-        <p class="card-text mx-auto" id="wind3"></p>
-        <p class="card-text mx-auto" id="pressure3"></p>
-    </div>
-    <div class="card" style="width: 18rem;margin:auto">
-        <div id="weather-date-day4" class="card-header mx-auto"> Weather Date</div>
-        <p class="card-text mx-auto" id="low-high-temp4"></p>
-        <div class="card-img-center mx-auto" id="icon4" alt="Weather Icon"></div>
-        <div class="card-body"></div>
-        <p class="card-text mx-auto" id="description4"></p>
-        <p class="card-text mx-auto" id="humidity4"></p>
-        <p class="card-text mx-auto" id="wind4"></p>
-        <p class="card-text mx-auto" id="pressure4"></p>
-    </div>
-    <div class="card" style="width: 18rem;margin:auto">
-        <div id="weather-date-day5" class="card-header mx-auto"> Weather Date</div>
-        <p class="card-text mx-auto" id="low-high-temp5"></p>
-        <div class="card-img-center mx-auto" id="icon5" alt="Weather Icon"></div>
-        <div class="card-body"></div>
-        <p class="card-text mx-auto" id="description5"></p>
-        <p class="card-text mx-auto" id="humidity5"></p>
-        <p class="card-text mx-auto" id="wind5"></p>
-        <p class="card-text mx-auto" id="pressure5"></p>
-    </div>
-    </div>
-</div>
-<div class="container2">
-<div id="geocoder" class="geocoder">
+<header>
+    <h1>Weather App</h1>
+<!--    <form class="form-inline my-2 my-lg-0">-->
+<!--        <input type="search" id="geocode" class="form-control mr-sm-2" placeholder="Enter Location..." aria-label="Search">-->
+<!--        <button id="geobutton" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
+<!--    </form>-->
 
+</header>
+<div id="geocoder" class="geocoder"></div>
+<div class="container-fluid">
+    <div class="card-group ">
+        <div class="card" style="width: 18rem;margin:auto; border-spacing: 10px;">
+            <div id="current-weather-date" class="card-header mx-auto"> Weather Date</div>
+            <p class="card-text mx-auto" id="low-high-temp"></p>
+            <div class="card-img-center mx-auto" id="icon" alt="Weather Icon"></div>
+            <div class="card-body"></div>
+            <p class="card-text mx-auto" id="description"></p>
+            <p class="card-text mx-auto" id="humidity"></p>
+            <p class="card-text mx-auto" id="wind"></p>
+            <p class="card-text mx-auto" id="pressure"></p>
+        </div>
+        <div class="card" style="width: 18rem;margin:auto">
+            <div id="weather-date-day2" class="card-header mx-auto"> Weather Date</div>
+            <p class="card-text mx-auto" id="low-high-temp2"></p>
+            <div class="card-img-center mx-auto" id="icon2" alt="Weather Icon"></div>
+            <div class="card-body"></div>
+            <p class="card-text mx-auto" id="description2"></p>
+            <p class="card-text mx-auto" id="humidity2"></p>
+            <p class="card-text mx-auto" id="wind2"></p>
+            <p class="card-text mx-auto" id="pressure2"></p>
+        </div>
+        <div class="card" style="width: 18rem;margin:auto">
+            <div id="weather-date-day3" class="card-header mx-auto"> Weather Date</div>
+            <p class="card-text mx-auto" id="low-high-temp3"></p>
+            <div class="card-img-center mx-auto" id="icon3" alt="Weather Icon"></div>
+            <div class="card-body"></div>
+            <p class="card-text mx-auto" id="description3"></p>
+            <p class="card-text mx-auto" id="humidity3"></p>
+            <p class="card-text mx-auto" id="wind3"></p>
+            <p class="card-text mx-auto" id="pressure3"></p>
+        </div>
+        <div class="card" style="width: 18rem;margin:auto">
+            <div id="weather-date-day4" class="card-header mx-auto"> Weather Date</div>
+            <p class="card-text mx-auto" id="low-high-temp4"></p>
+            <div class="card-img-center mx-auto" id="icon4" alt="Weather Icon"></div>
+            <div class="card-body"></div>
+            <p class="card-text mx-auto" id="description4"></p>
+            <p class="card-text mx-auto" id="humidity4"></p>
+            <p class="card-text mx-auto" id="wind4"></p>
+            <p class="card-text mx-auto" id="pressure4"></p>
+        </div>
+        <div class="card" style="width: 18rem;margin:auto">
+            <div id="weather-date-day5" class="card-header mx-auto"> Weather Date</div>
+            <p class="card-text mx-auto" id="low-high-temp5"></p>
+            <div class="card-img-center mx-auto" id="icon5" alt="Weather Icon"></div>
+            <div class="card-body"></div>
+            <p class="card-text mx-auto" id="description5"></p>
+            <p class="card-text mx-auto" id="humidity5"></p>
+            <p class="card-text mx-auto" id="wind5"></p>
+            <p class="card-text mx-auto" id="pressure5"></p>
+        </div>
+    </div>
 </div>
-<div id='map'></div>
-<!--<pre id="coordinates" class="coordinates"></pre>-->
+<div id="container2">
+    <div id='map'></div>
 </div>
-
 <script src="./js/jquery-3.5.1.js"></script>
 <script src='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js'></script>
 <script src="js/mapbox-geocoder-utils.js"></script>
-
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 <script src="js/keys.js"></script>
@@ -128,3 +88,4 @@
 
 </body>
 </html>
+
