@@ -140,8 +140,8 @@ function map(){
     var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v11',
-        center: [0, 0],
-        zoom: 2
+        center: [-98.4936, 29.4241],
+        zoom: 9,
     });
     var geocoder = new MapboxGeocoder({
         accessToken: mapboxKey,
@@ -155,7 +155,7 @@ function map(){
     var marker = new mapboxgl.Marker({
         draggable: true
     })
-        .setLngLat([0, 0])
+        .setLngLat([-98.4936, 29.4241])
         .addTo(map);
 
     function onDragEnd() {
