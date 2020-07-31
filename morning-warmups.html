@@ -293,23 +293,67 @@
     //     }
     // }
     // console.log(countWords("dinosaur is walking down the aisle"));
-    function fizzbuzz2(num) {
-        if(num % 3 === 0 && num % 5 === 0){
-            return "FizzBuzz";
-        }else if(num % 3 === 0){
-            return "Fizz";
-        }else if( num % 5 === 0){
-            return "Buzz";
-        } else if(typeof num !== "number"){
-            return null
-        }else{
-            return num;
-        }
-    }
-
-    console.log(fizzbuzz2(44));
-    console.log(fizzbuzz2(55));
-    console.log(fizzbuzz2(33));
+    // function fizzbuzz2(num) {
+    //     if(num % 3 === 0 && num % 5 === 0){
+    //         return "FizzBuzz";
+    //     }else if(num % 3 === 0){
+    //         return "Fizz";
+    //     }else if( num % 5 === 0){
+    //         return "Buzz";
+    //     } else if(typeof num !== "number"){
+    //         return null
+    //     }else{
+    //         return num;
+    //     }
+    // }
+    //
+    // console.log(fizzbuzz2(44));
+    // console.log(fizzbuzz2(55));
+    // console.log(fizzbuzz2(33));
+// use the reduce method to get the tallest hamster in the array
+//
+//     var hamsters = [
+//         {
+//             name: "Hamtaro",
+//             heightInMM: 86,
+//             fur: ['orange', 'white'],
+//             gender: "male",
+//             dateOfBirth: "August 6"
+//         } , {
+//             name: "Bijou",
+//             heightInMM: 75,
+//             fur: ['white'],
+//             gender: "female",
+//             dateOfBirth: "July 10"
+//         } , {
+//             name: "Oxnard",
+//             heightInMM: 100,
+//             fur: ['grey', 'white'],
+//             gender: "male",
+//             dateOfBirth: "May 3"
+//         } , {
+//             name: "Boss",
+//             heightInMM: 120,
+//             fur: ['brown', 'white'],
+//             gender: "male",
+//             dateOfBirth: "Spetember 21"
+//         } , {
+//             name: "Snoozer",
+//             heightInMM: 85,
+//             fur: ['brown', 'white', "pink"],
+//             gender: "male",
+//             dateOfBirth: "January 14"
+//         }
+//     ];
+//     let tallHamHam = hamsters.reduce((tallHamster, hamHam) => {
+//         if(hamHam.heightInMM > tallHamster.heightInMM){
+//             return hamHam;
+//         }else{
+//             return tallHamster
+//         }
+//
+//     }, {heightInMM: 0})
+//     console.log(tallHamHam);
 
 
 
